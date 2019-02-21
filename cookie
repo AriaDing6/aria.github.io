@@ -1,0 +1,7 @@
+// 设置http-only=true, 防止攻击者通过document拿到cookie后伪造登录，这种是全局的设置，也可以只设置单个的值不可被document访问到
+
+// java中设置cookie
+　　Cookie cookie = new Cookie("key", "value");
+　　cookie.setMaxAge(60);   //Sets the maximum age of the cookie in seconds. 
+　　设置60秒生存期，如果设置为负值的话，则为浏览器进程Cookie(内存中保存)，关闭浏览器就失效。
+    如果设置为 0 的话，则该cookie会被删除。
